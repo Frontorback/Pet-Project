@@ -3,6 +3,7 @@
 ### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
 
 <a href="https://frontorback.github.io/" target="_blank">https://frontorback.github.io/</a> - cсылка на сайт
+
 <a href="https://www.figma.com/file/1PGSbfvK9aqGqMlN1utBRD/Figma---eCommerce-template?node-id=2%3A1713" target="_blank">Макет</a> 
 
 *Home Page*: На главной странице есть поисковая строка, которая зависит от выбранной категории, корзина, меню и отфильтрованные продукты по неким параметрам.
