@@ -1,7 +1,7 @@
 # Grocery store
 
 ### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
-https://frontorback.github.io/ - ccылка на сайт
+[go](https://frontorback.github.io/){:target="_blank" rel="noopener"}
 
 *Home Page*: На главной странице есть поисковая строка, которая зависит от выбранной категории, корзина, меню и отфильтрованные продукты по неким параметрам.
 
