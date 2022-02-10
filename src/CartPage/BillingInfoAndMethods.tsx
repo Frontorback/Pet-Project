@@ -12,13 +12,16 @@ import { Link } from "react-router-dom";
 import BillingMethod from "../Components/Cart/BillingMethod";
 import PaymentMethod from "../Components/Cart/PaymentMethod";
 import CartStep from "../Components/Cart/CartStep";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addOrder, clearCart } from "../Redux/ProductSlice";
+import { RootState } from "../Redux/store";
 
 const BillingInfoAndMethods = () =>{
 
     const {handleSubmit, register, formState: {errors, isValid} } = useForm({mode: "onBlur"})
+
     const dispatch = useDispatch();
+    const IdOrder = useSelector( (state:RootState) => state.products.order)
 
     const [method, setMethod] = useState<iMethod>({
         billing:"FedEx",
@@ -46,6 +49,7 @@ const BillingInfoAndMethods = () =>{
                       method.payment === "2" ? 
                       "Bitcoin" : 
                       null
+        txt.selectedProducts = IdOrder                 
         dispatch(addOrder(txt))
         dispatch(clearCart())
         alert("Thanks for shopping :)")
