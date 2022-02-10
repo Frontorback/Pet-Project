@@ -1,0 +1,286 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.HeaderLink{
+    @include flc();
+    margin: rem(15.5) 0 rem(32.5) 0 ;
+    font-family: $FFOpenSans;
+    font-size: rem(12);
+    line-height: rem(16);  
+    a,
+    span{
+        color: $colorGrey1;
+    }
+    span{
+        margin: 0 rem(8);
+    }
+    .HeaderLink__Product{
+        color: $colorBlack;
+    }
+}
+.ProductDetail{
+    @include flc($al: flex-start);
+
+    .ProductDetail__Images{
+        @include flexcolumn();
+        img{
+            width: rem(569);
+            height: rem(436);
+            border-radius: rem(12);
+            margin-bottom: rem(32);
+            &:first-child{
+                position: relative;
+            }
+        }
+            .imgTitle{
+                @include flc();
+                position: absolute;
+                margin-top: rem(16);
+                span{
+                    font-family: $FFPopSB;
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding: rem(4) rem(10);
+                    color: $colorGreen;
+                    background-color: $colorGreenBack;
+                    border-radius: rem(12);
+                    &:last-child{
+                        margin-left: rem(16);
+                    }
+                }
+                .Discount{
+                    margin-left: rem(16)
+                }
+                
+            }
+        
+    }
+    .ProductDetail__Information{
+        @include flexcolumn();
+        margin-left: rem(32);
+        margin-right: rem(42.5);
+        .Information_title{
+            font-family: $FFPopSB;
+            font-size: rem(32);
+            line-height: 140%;
+            color: $colorBlack;
+            margin-bottom: rem(8);
+        }
+        .Information_rating{
+            @include flc();
+            img{
+                margin-right: rem(2);
+            } 
+            span{
+                align-self: flex-end;
+                font-family: $FFOpenSans;
+                font-size: rem(12);
+                line-height: rem(16);
+                color: $colorGrey1;
+                text-decoration: underline;
+                margin-left: rem(6);
+            }
+
+        }
+        .Information_BigDescription{
+            font-family: $FFOpenSans;
+            font-size: rem(17);
+            line-height: rem(23);
+            color: $colorBlack;
+            margin: rem(40) 0;
+        }
+        .ProductSettings{
+            @include flc();
+            justify-content: space-between;
+            .productFrom{
+                width: rem(269);
+                @include flc();
+                &:first-child{
+                    margin-right: rem(32)
+                }
+                .productFrom__First,
+                .productFrom__Second{
+                    @include flexcolumn();
+                    font-family: $FFOpenSans;
+                    font-size: rem(14);
+                    line-height: rem(19);
+                    div,
+                    span{
+                        margin-bottom: rem(12);
+                    }
+                }
+                .productFrom__First{
+                    color: $colorGrey1;
+                    margin-right: rem(39);
+                }
+                .productFrom__Second{
+                    color: $colorBlack;
+                    span{
+                        text-decoration: underline;
+                         
+                    }
+                    .Second_span{
+                        color: $colorGreen;
+                    }  
+
+                }
+            }
+
+        }
+        .productFrom__AddToCart{
+            @include flc();
+            justify-content: space-between;
+            border: rem(1) solid $colorGreyBtn;
+            border-radius: rem(12);
+            margin: rem(40) 0 rem(30) 0;
+
+
+            .priceColumn{
+                @include flexcolumn();
+                font-family: $FFPopSB;
+                padding: rem(16);
+                .price{
+                    font-size: rem(26);
+                    line-height: rem(39);
+                    color: $colorGreen;
+                }
+                .OldPrice{
+                    color: $colorGrey1;
+                    font-size: rem(12);
+                    line-height: rem(18);
+                    text-decoration: line-through;
+                }
+            }
+            .AddToCart_CountAndBtn{
+                @include flc();
+            
+                .ChooseCount{
+                    @include flc();
+                    border: rem(1) solid $colorGreyBorder;
+                    background-color: $colorGreyBack;
+                    border-radius: rem(12);
+                    padding: rem(15) rem(16);
+                    margin-right: rem(24);
+                    input{
+                        font-family: $FFOpenSans;
+                        font-size: rem(14);
+                        line-height: rem(19);
+                        color: $colorGreyBorder;
+                        background-color: $colorGreyBack;
+                        border: none;
+                        width: rem(9);
+                        outline: none;
+
+                    }
+                    .ChooseCount_border{
+                        height: rem(20);
+                        border-right: rem(1) solid $colorGreyBorder;
+                        margin: 0 rem(16);
+                    }
+                    .ChooseCount_options{
+                        @include flc();
+                        font-family: $FFPopSB;
+                        font-size: rem(12);
+                        line-height: rem(18);
+                        color: $colorBlack;
+                        img{
+                            width: rem(12);
+                            height: rem(12);
+                            margin-left: rem(4);
+                        }
+                    }
+            
+                }
+                .AddToCart_Btn{
+                    @include flc();
+                    padding: rem(12) rem(16);
+                    background-color: $colorGreen;
+                    border: rem(2) solid $colorGreenBorderBuy;
+                    border-radius: rem(12);
+                    font-family: $FFPopB;
+                    font-size: rem(15);
+                    line-height: rem(22);
+                    margin-right: rem(8);
+                    color: $colorWhite;
+                    cursor: pointer;
+                    &:active{
+                        background-color: $colorGreyBorder;
+                        border-color: $colorGreyBorder;
+                    }
+                    img{
+                        width: rem(16);
+                        height: rem(16);
+                        margin-right: rem(6);  
+                    }
+                }
+            }      
+        }
+        .productFrom__WishList{
+            @include flc();
+            button{
+                @include flc();
+                font-family: $FFPopB;
+                font-size: rem(15);
+                line-height: rem(22);
+                color: $colorBlack;
+                img{
+                    width: rem(16);
+                    height: rem(16);
+                    margin-right: rem(6);
+                }
+                &:first-child{
+                    margin-right: rem(40);
+                    img{
+                        margin-left: rem(12);
+                    }
+
+                }
+            }
+        }
+        .productFrom__DescriptionAndQA{
+            @include flc();
+            justify-content: space-between;
+            margin-top: rem(62);
+            .DescriptionAndQA_Item{
+                @include flc();
+                font-family: $FFPopSB;
+                font-size: rem(18);
+                line-height: rem(27);
+                color: $colorBlack;
+                cursor: pointer;
+                &:last-child{
+                    margin-right: rem(46);
+                }
+                span{
+                    font-size: rem(12);
+                    line-height: rem(18);
+                    color: $colorGreen;
+                    padding: 0 rem(8);
+                    background-color: $colorGreenBack;
+                    margin-left: rem(8);
+                    border-radius: rem(12);
+                }
+            }       
+        }
+        .productFrom__Border{
+            @include flc();
+            width: 100%;
+            margin: rem(16) 0 rem(48) 0;
+            .Border{
+                border-top: rem(1) solid $colorGreyBtn;
+                &:nth-child(1){
+                    width: 29.475%;
+                }
+                &:nth-child(2){
+                    width: 33.3%;
+                }
+                &:nth-child(3){
+                    width: 33.3%;
+                }
+            }
+            .BorderActive{
+                border-top: rem(1) solid $colorGreen;
+            }
+        }
+    }
+}

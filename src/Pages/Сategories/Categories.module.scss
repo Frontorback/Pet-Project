@@ -1,0 +1,25 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.NavList {
+  @include flc();
+  margin-left: -2.8125rem;
+  margin-right: -2.8125rem;
+  background-color: $colorGreyBack;
+  height: 8.65vh;
+  li:first-child {
+    margin-left: 2.8125rem;
+  }
+  li {
+    margin-right: 2.5rem;
+    a {
+      color: $colorBlack;
+      font-family: "Poppins-Medium";
+    }
+    .miniArrow {
+      margin-left: 0.125rem;
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+}

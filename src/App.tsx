@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import FirstHeader from './Pages/Header/FirstHeader';
+import SecondHeader from './Pages/Header/SecondHeader';
+import './index.scss'
+import Home from './Pages/Home';
+import Categories from './Pages/Сategories/Categories';
+import Footer from './Pages/Footer/Footer';
+import FruitAndVegetables from './Pages/FruitAndVegetables';
+import Bakery from './Pages/Bakery';
+import MeatAndFish from './Pages/MeatAndFish';
+import Cart from './Pages/Cart';
+import Search from './Pages/Search';
+import Drinks from './Pages/Drinks';
+import Kitсhen from './Pages/Kitchen';
 
-function App() {
+
+
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <BrowserRouter>
+        <FirstHeader />
+        <SecondHeader />
+        <Categories/>  
+        <Routes>
+          
+          <Route path="/" element={<Home />}/>
+          <Route path="/Bakery" element={<Bakery />}/>
+          <Route path="/Fruit-and-vegetables" element={<FruitAndVegetables />}/>
+          <Route path="/Meat-and-fish" element={<MeatAndFish />}/>
+          <Route path="/Drinks" element={<Drinks />}/>
+          <Route path="/Kitchen" element={<Kitсhen />}/>
+          <Route path="/Cart" element={<Cart />}/>
+          <Route path="/Search" element={<Search />}/>
+
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;

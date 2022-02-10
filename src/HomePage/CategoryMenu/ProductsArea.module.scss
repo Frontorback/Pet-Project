@@ -1,0 +1,10 @@
+@import "../../scss/mixins";
+.ProductsArea{
+    margin: rem(64) 0;
+    @include flc($al: flex-start);
+    justify-content: space-between;
+
+}
+.Cards{
+    @include flc();
+}

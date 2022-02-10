@@ -1,0 +1,144 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.CardList{
+    border: rem(1) solid $colorGreyBack;
+    border-radius: rem(12);
+    @include flc();
+    margin: 0 0 rem(32) rem(32);
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+    .productImg{
+        width: rem(268);
+        height: rem(280);
+        margin-right: rem(32);
+        border-radius: rem(12)
+    }
+    .productInfo{
+        @include flexcolumn();
+        margin-top: rem(32);
+        flex-grow: 3;
+        h1{
+            font-family: $FFPopSB;
+            font-size: rem(18);
+            line-height: rem(27);
+            margin-bottom: rem(4);
+
+        }
+        h2{
+            font-family: $FFOpenSans;
+            font-size: rem(12);
+            line-height: rem(16);
+            margin-bottom: rem(8);
+        }
+        .rating{
+            @include flc();
+            margin-bottom: rem(25);
+            .ratingStars{
+                width: rem(20);
+                height: rem(20);
+                margin-right: rem(2);
+            }
+            
+        }
+        .productFrom{
+            @include flc();
+            
+            .productFrom__First{
+                @include flexcolumn();
+                margin-right: rem(32);
+                align-self: flex-start;
+                div{
+                    font-family: $FFOpenSans;
+                    font-size: rem(14);
+                    line-height: rem(19);
+                    color: $colorGrey1;
+                    margin-bottom: rem(12);
+
+                }
+                span{
+                    color: $colorGreen;
+                }
+            }
+            .productFrom__First:last-child{
+                margin-right: rem(0);
+            }
+        }
+       
+    }
+    .ProductAdd{
+        @include flexcolumn();
+        margin-right: rem(32);
+        margin-top: rem(32);
+        flex-grow: 1;
+        .Prices{
+            div{
+                font-family: $FFPopSB;
+                font-size: rem(18);
+                line-height: rem(27);
+                color: $colorBlack;
+            }
+            .OldPrice{
+                color: $colorGrey1;
+                text-decoration: line-through;
+            }
+        }
+        .Shipping{
+            margin-top: rem(16);
+            font-family: $FFPopSB;
+            font-size: rem(12);
+            line-height: rem(18);
+            color: $colorGrey1;
+        }
+        .Delivery{
+            font-family: $FFOpenSans;
+            font-size: rem(12);
+            line-height: rem(16);
+            color: $colorGrey1;
+            margin-bottom: rem(26);
+        }
+        .WishList,
+        .DetailBtn{
+            @include flc();
+            justify-content: center;
+            border-radius: rem(12); 
+            width: rem(164);
+            cursor: pointer;
+            div{
+                font-family: $FFPopB; 
+                font-size: rem(15);
+                line-height: rem(22);
+            }
+            
+            
+        }
+        .DetailBtn{
+            height: rem(47);
+            border: 2px solid $colorGreenBorder;
+            background-color: $colorGreen;    
+            margin-bottom: rem(12);
+            &:active{
+                background-color: $colorGreyBorder;
+                border-color: $colorGreyBorder;
+            }
+            div{
+                color: $colorWhite;
+            }
+            img{
+                margin-left: rem(6);
+            }
+        }
+        .WishList{
+            height: rem(36);
+            background-color: $colorGreyBtn;
+            div{
+                color: $colorBlack;
+            }
+            img{
+                margin-right: rem(6);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,121 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.ProductOrder{
+    @include flexcolumn();
+    margin-top: rem(32);
+    .ProductOrderRow{
+        @include flc();
+        
+        .ProductOrder__First{
+            @include flexcolumn();
+            .First_Image{
+                width: rem(100);
+                height: rem(67);
+                border-radius: rem(12)
+            }
+            .First_ItemRow{
+                @include flc();
+                margin-top: rem(12);
+                cursor: pointer;
+                img{
+                    margin-right: rem(6);
+                }
+            }
+
+        }
+        .ProductOrder_Second{
+            width: 100%;
+            margin-left: rem(16);
+            h2{
+                font-family: $FFPopM;
+                font-size: rem(15);
+                line-height: rem(22);
+                color: $colorBlack;
+                margin-bottom: rem(4)
+            }
+            .Second_Info{
+                @include flc();
+                margin-bottom: rem(7);
+                .Second_InfoName{
+                    font-family: $FFOpenSans;
+                    font-size: rem(12);
+                    line-height: rem(16);
+                    color: $colorBlack;
+                    margin-left: rem(14);
+                }
+            }
+            .Second_Rating{
+                @include flc();
+                margin-top: rem(4);
+                margin-bottom: rem(16);
+                img{
+                    margin-right: rem(2)
+                }
+            }
+            .Second_PriceSection{
+                @include flc();
+                justify-content: space-between;
+                .priceColumn{
+                    @include flexcolumn();
+                    font-family: $FFPopSB;
+                    .price{
+                        font-size: rem(18);
+                        line-height: rem(27);
+                        color: $colorGreen;
+                    }
+                    .OldPrice{
+                        color: $colorGrey1;
+                        font-size: rem(12);
+                        line-height: rem(18);
+                        text-decoration: line-through;
+                    }
+                }
+                .ChooseCount{
+                    @include flc();
+                    
+                    border: rem(1) solid $colorGreyBorder;
+                    background-color: $colorGreyBack;
+                    border-radius: rem(12);
+                    padding: rem(6.5) rem(6);
+                    
+                    .ChooseCount_count{
+                        font-family: $FFOpenSans;
+                        font-size: rem(14);
+                        line-height: rem(19);
+                        color: $colorGreyBorder;
+                    }
+                    .ChooseCount_border{
+                        height: rem(20);
+                        border-right: rem(1) solid $colorGreyBorder;
+                        margin: 0 rem(16);
+                    }
+                    .ChooseCount_options{
+                        @include flc();
+                        font-family: $FFPopSB;
+                        font-size: rem(12);
+                        line-height: rem(18);
+                        color: $colorBlack;
+                        img{
+                            width: rem(12);
+                            height: rem(12);
+                            margin-left: rem(4);
+                        }
+                    }
+            
+                }
+            }
+        }
+        
+    }
+    .ProductOrder_BorderBottom{
+        margin-top: rem(16);
+        border: rem(1) solid $colorGreyBack;
+    }
+}
+
+.OrderSpan{
+    font-family: $FFOpenSans;
+    font-size: rem(12);
+    line-height: rem(16);
+    color: $colorGrey1;
+}

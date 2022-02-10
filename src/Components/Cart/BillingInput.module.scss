@@ -1,0 +1,46 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.InputColumn{
+    @include flexcolumn();
+    position: relative;
+    margin-right: rem(32);
+    margin-top: rem(32);
+    width: 100%;
+    label{
+        font-family: $FFPopSB;
+        font-size: rem(12);
+        line-height: rem(18);
+        color: $colorBlack;
+    }
+    
+    input{
+        height: rem(16);
+        border-radius: rem(12);
+        border: rem(1) solid $colorGreyBorder;
+        padding: rem(12) rem(16) rem(12) rem(21);
+        font-family: $FFOpenSans;
+        font-size: rem(14);
+        line-height: rem(19);
+        color: $colorGrey1;
+        background-color: $colorGreyBack;
+        outline: none;
+        &::placeholder{
+        color: $colorGrey1;
+        }
+        &:focus,
+        &:focus-visible
+        {    
+            border: rem(2) solid $colorGreenBorder;
+        }
+    }
+    .inputBorderError{
+        border: rem(2) solid red;
+    }
+    .inputError{
+        position: absolute;
+        top: rem(60);
+        left: rem(12);
+        color: red;
+    }
+}

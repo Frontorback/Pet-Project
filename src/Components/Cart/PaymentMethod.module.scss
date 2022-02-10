@@ -1,0 +1,40 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.BillingItems_active{
+    @include flexcolumn();
+    background-color: $colorGreyBack;
+    padding: rem(16);
+    border-radius: rem(12);
+    margin-bottom: rem(16);
+    
+    .BillingItems_RowActive{
+        @include flc();
+        justify-content: space-between;
+        font-family: $FFPopSB;
+        font-size: rem(12);
+        line-height: rem(18);              
+        .firstItem{
+            @include flc();
+            .firstItem_checkboxActive{
+                width: rem(10);
+                height: rem(10);
+                border: rem(5) solid $colorGreen;
+                border-radius: rem(12);
+                background-color: $colorWhite;
+
+                margin-right: rem(16);
+                cursor: pointer;
+            }
+        }
+    }
+    .none{
+        display: none;
+    }
+    
+    .InputActiveRow{
+        @include flc();
+      
+    }
+
+}

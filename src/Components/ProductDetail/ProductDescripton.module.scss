@@ -1,0 +1,53 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.ProductDescription__topic{
+    font-family: $FFPopM;
+    font-size: rem(15);
+    line-height: rem(22);
+    margin-bottom: rem(8);
+}
+.ProductDescription__article{
+    font-family: $FFOpenSans;
+    font-size: rem(14);
+    line-height: rem(19);
+    margin-bottom: rem(32);
+}
+.titleVitamins{
+    @include flc();
+    justify-content: space-between;
+    margin: rem(15) rem(117) 0 0;
+    font-family: $FFPopSB;
+    font-size: rem(12);
+    line-height: rem(18); 
+    div:nth-child(1){
+        flex-grow: 1.2;
+    }
+    div:nth-child(2){
+        flex-grow: 1;
+    }
+    div:nth-child(3){
+        flex-grow: 0;
+    }
+}
+.Vitamins_border{
+    margin: rem(7) 0 rem(11) 0 ;
+    border: rem(1) solid $colorGreyBack2;
+}
+.VitaminsDetail{
+    @include flc();
+    justify-content: space-between;
+    margin-right: rem(107);
+    .VitaminsDetail__items{
+        @include flexcolumn();
+        font-family: $FFOpenSans;
+        font-size: rem(14);
+        line-height: rem(19);
+        color: $colorGrey2;
+        span{
+            margin-bottom: rem(21);
+        }
+    }
+}
+
+

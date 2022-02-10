@@ -1,0 +1,21 @@
+@mixin flc($al: center) {
+    display: flex;
+    flex-direction: row;
+    align-items: $al;
+
+    // justify-content: center;
+  }
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+  }
+@function rem($px) {
+  $result: calc($px / 16) + rem;
+  @return $result; 
+}  
+// @function rem($px) {
+//   $result: math.div($px, 16) + rem;
+//   @return $result; 
+// }  

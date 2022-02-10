@@ -1,0 +1,97 @@
+@import "../scss/mixins";
+@import "../scss/variables";
+
+.OrderSummary{
+    @include flexcolumn();
+    height: fit-content;
+    padding: rem(32) rem(16);
+    border-radius: rem(12);
+    border: rem(1) solid $colorGreyBorder;
+    margin: rem(64) 0  0 rem(32);
+
+    .OrderSummary__Title{
+        font-family: $FFPopSB;
+        font-size: rem(22);
+        line-height: rem(33);
+        margin-bottom: rem(4);
+        color: $colorBlack;
+    }
+    .OrderSummary__Descrip{
+        font-family: $FFOpenSans;
+        font-size: rem(12);
+        line-height: rem(16);
+        color: $colorGrey1;
+        margin-bottom: rem(8);
+    }
+    .OrderSummaryC{
+        margin-top: rem(40);
+        .OrderSummary__TotalPrice{
+            @include flc();
+            justify-content: space-between;
+            margin-bottom: rem(12);
+
+            .TotalPrice_Item{
+                font-family: $FFPopSB;
+                font-size: rem(12);
+                line-height: rem(18);
+                color: $colorBlack;
+            }
+            
+        }
+    }
+    .OrderSummary__PromoCode{
+        @include flc();
+        justify-content: space-between;
+        padding: rem(11) rem(16) rem(12) rem(21);
+        border: rem(1) solid $colorGreyBorder;
+        border-radius: rem(12);
+        .PromoCode_Input{
+            width: 60%;
+            font-family: $FFOpenSans;
+            font-size: rem(14);
+            line-height: rem(19);
+            color: $colorGrey1;
+            outline: none;
+            border: none;
+            &::placeholder{
+                color: $colorGrey1;
+            }
+        }
+        .PromoCode_Apply{
+            font-family: $FFPopB;
+            font-size: rem(15);
+            line-height: rem(22);
+            color: $colorBlack;
+            cursor: pointer;
+        }
+    }
+    .OrderSummary__Total{
+        @include flc();
+        justify-content: space-between;
+        margin-top: rem(40);
+        .Total_OrderAndDelivery{
+            @include flexcolumn();
+            .Order{
+                font-family: $FFPopSB;
+                font-size: rem(12);
+                line-height: rem(18);
+                color: $colorBlack;
+            }
+            .Delivery{
+                font-family: $FFOpenSans;
+                font-size: rem(12);
+                line-height: rem(16);
+                color: $colorGreen;
+            }
+        }
+        .Total_Price{
+            font-family: $FFPopSB;
+            font-size: rem(26);
+            line-height: rem(39);
+            color: $colorGreen;
+        }
+    }
+
+
+
+}

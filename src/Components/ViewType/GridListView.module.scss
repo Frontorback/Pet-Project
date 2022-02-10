@@ -1,0 +1,56 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.GridListView{
+    @include flc();
+    justify-content: space-between;
+    h1{
+        margin: rem(8) 0;
+        color: $colorBlack;
+        font-family: $FFPopSB;
+        font-size: rem(32);
+        line-height: rem(48);
+    }
+    .GridListProductsRow{
+        @include flc();
+        
+        .GridListRow{
+            @include flc();
+            margin-right: rem(24);
+            font-family: $FFOpenSans;
+            font-size: rem(12);
+            line-height: rem(16);
+            cursor: pointer;
+            img{
+                margin-right: rem(4);
+            }
+            .viewActive{
+                color: $colorBlack;
+            }
+            .viewUnActive{
+                color: $colorGrey1;
+            }
+            
+        }
+        .ProductsRow{
+            @include flc();
+            .ProductsCount{
+                font-family: $FFPopSB;
+                font-size: rem(12);
+                line-height: rem(18);
+                color: $colorGreen;
+                background-color: $colorGreenBack;
+                border-radius: rem(12);
+                padding: 0 rem(8);
+            }
+            .Products{
+                font-family: $FFOpenSans;
+                font-size: rem(12);
+                line-height: rem(16);
+                margin-left: rem(4);
+                color: $colorGrey1;
+            }
+        }
+    }
+    
+}

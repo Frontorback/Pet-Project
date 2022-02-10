@@ -1,0 +1,121 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.secondHeader {
+  @include flc();
+  justify-content: space-between;
+  padding-top: rem(40);
+  padding-bottom: rem(48);
+
+  .searchSection {
+    @include flc();
+    background-color: $colorGreyBack;
+    border: 1px solid #d1d1d1;
+    border-radius: rem(12);
+    padding: 0 rem(16);
+    position: relative;
+    img {
+      cursor: pointer;
+    }
+
+    .categories {
+      white-space: pre;
+      margin: rem(10) rem(8) rem(9) 0;
+      font-family: $FFPopB;
+      cursor: pointer;
+    }
+    .Showcategories {
+      position: absolute;
+      left: rem(8);
+      top: rem(44);
+      background-color: $colorGreyBack;
+      color: $colorBlack;
+      border-bottom-right-radius: rem(12);
+      border-bottom-left-radius: rem(12);
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.5s;
+      div {
+        padding: rem(10);
+
+        &:hover {
+          color: $colorGreen;
+        }
+      }
+    }
+    .Hidecategories {
+      opacity: 0;
+    }
+
+    .arrow {
+      width: rem(16);
+      height: rem(16);
+      align-self: center;
+      transform: rotate(0deg);
+      transition: transform 0.5s;
+    }
+    .arrowActive {
+      transform: rotate(180deg);
+    }
+
+    .border {
+      border-right: 1px solid $colorGreyBorder;
+      height: rem(20);
+      margin: rem(11) rem(24);
+    }
+    form {
+      position: relative;
+      input {
+        width: 12.228vw;
+        border-style: none;
+        background-color: $colorGreyBack;
+        margin: rem(11) rem(12) rem(12) 0;
+        font-family: $FFOpenSans;
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      .SearchList {
+        margin-top: rem(1);
+        position: absolute;
+        left: rem(-10);
+        background-color: $colorGreyBack;
+        color: $colorBlack;
+        border-bottom-right-radius: rem(12);
+        border-bottom-left-radius: rem(12);
+        cursor: pointer;
+        div {
+          padding: rem(10);
+
+          &:hover {
+            color: $colorGreen;
+          }
+        }
+      }
+    }
+  }
+
+  .profileBasket {
+    img:first-child {
+      margin-right: rem(40);
+    }
+    a {
+      position: relative;
+      .basketImg {
+      }
+      .Baskect_count {
+        position: absolute;
+        right: rem(55);
+        top: rem(5);
+        font-family: $FFPopSB;
+        font-size: rem(12);
+        line-height: rem(18);
+        color: $colorWhite;
+        background-color: $colorOrange;
+        padding: 0 rem(5);
+        border-radius: rem(12);
+      }
+    }
+  }
+}

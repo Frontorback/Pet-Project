@@ -1,0 +1,28 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.BillingInfoAndMethods__Title{
+    font-family: $FFPopSB;
+    font-size: rem(22);
+    line-height: rem(33);
+    color: $colorBlack;
+    margin: rem(64) 0 rem(4) 0;     
+}
+.BillingInfoAndMethods__Step{
+    @include flc();
+    justify-content: space-between;
+    margin-bottom: rem(32);
+    span{
+        font-family: $FFOpenSans;
+        font-size: rem(12);
+        line-height: rem(16);
+        color: $colorGrey1;
+    }
+    
+}
+.BillingInfoAndMethods__FirstStep{
+    margin-bottom: rem(0);  
+}
+.BillingInfoAndMethods__FirstTitle{
+    margin-top: rem(16)
+}

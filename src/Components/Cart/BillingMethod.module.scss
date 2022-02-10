@@ -1,0 +1,42 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.BillingItems_Row{
+    @include flc();
+    justify-content: space-between;
+    background-color: $colorGreyBack;
+    padding: rem(16);
+    border-radius: rem(12);
+    font-family: $FFPopSB;
+    font-size: rem(12);
+    line-height: rem(18);              
+    margin-bottom: rem(16);
+    .firstItem{
+        @include flc();
+        .firstItem_checkbox{
+            width: rem(17);
+            height: rem(17);
+            border-radius: rem(12);
+            background-color: $colorWhite;
+            border: rem(1.5) solid $colorGreyBorder;
+            margin-right: rem(16);
+            cursor: pointer;
+        }
+        .firstItem_checkboxActive{
+            width: rem(10);
+            height: rem(10);
+            border: rem(5) solid $colorGreen;
+        }
+    }
+    .AdditionalPrice{
+        @include flc();
+        .AdditionalPrice_count{
+            color: $colorGreen;
+            margin-right: rem(12);
+        }
+        .AdditionalPrice_name{
+            color: $colorBlack;
+        }
+    }
+
+}

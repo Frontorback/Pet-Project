@@ -1,0 +1,129 @@
+import React, { useState } from "react";
+import secondStyle from "./secondStyle.module.scss";
+import freshnesecom from "../../img/Freshnesecom.svg";
+import arrow from "../../img/Arrow.svg";
+import search from "../../img/search.svg";
+import pofile from "../../img/pofile.svg";
+import basket from "../../img/basket.svg";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { closeDetail } from "../../Redux/ProductSlice";
+import { RootState } from "../../Redux/store";
+import { useNavigate } from "react-router-dom";
+import { clearFilters, searchFilter } from "../../Redux/FiltersSlice";
+import { MenuAPI, Products } from "../../API/api";
+const SecondHeader = () => {
+  const [state, setState] = useState("");
+  const [categ, setCateg] = useState({
+    isChoosing: false,
+    setCategorie: "All categories",
+  });
+
+  const SearchCateg =
+    categ.setCategorie !== "All categories"
+      ? Products.slice().filter((k) => k.productType === categ.setCategorie)
+      : Products;
+
+  const dispatch = useDispatch();
+
+  const inCart = useSelector((state: RootState) => state.products.order);
+  let navigate = useNavigate();
+  const SerchFnc = () => {
+    dispatch(searchFilter(state));
+    navigate("/Search");
+  };
+  const switchPage = () => {
+    dispatch(closeDetail());
+    dispatch(clearFilters());
+  };
+
+  return (
+    <div className={secondStyle.secondHeader}>
+      <Link to={"/"}>
+        <img src={freshnesecom} alt="SecondHeader" />
+      </Link>
+
+      <div className={secondStyle.searchSection}>
+        <div
+          className={secondStyle.categories}
+          onClick={() => setCateg({ ...categ, isChoosing: !categ.isChoosing })}
+        >
+          {categ.setCategorie}
+        </div>
+        <div
+          className={
+            categ.isChoosing
+              ? secondStyle.Showcategories
+              : secondStyle.Hidecategories
+          }
+        >
+          {MenuAPI.map(
+            (key) =>
+              categ.isChoosing && (
+                <div
+                  key={key.id}
+                  onClick={() =>
+                    setCateg({ isChoosing: false, setCategorie: key.title })
+                  }
+                >
+                  {key.title}
+                </div>
+              )
+          )}
+          {categ.isChoosing && (
+            <div
+              onClick={() =>
+                setCateg({ isChoosing: false, setCategorie: "All categories" })
+              }
+            >
+              All categories
+            </div>
+          )}
+        </div>
+
+        <img
+          className={
+            categ.isChoosing
+              ? `${secondStyle.arrowActive} ${secondStyle.arrow}`
+              : secondStyle.arrow
+          }
+          onClick={() => setCateg({ ...categ, isChoosing: !categ.isChoosing })}
+          src={arrow}
+          alt="arrow"
+        />
+        <div className={secondStyle.border}></div>
+        <form onSubmit={() => SerchFnc()}>
+          <input
+            placeholder="Search Products, categories ..."
+            value={state}
+            onChange={(e) => setState(e.target.value)}
+          />
+          <div className={secondStyle.SearchList}>
+            {SearchCateg.map((key) =>
+              key.title
+                .toLocaleLowerCase()
+                .includes(state.toLocaleLowerCase()) &&
+              state.length > 0 &&
+              state !== key.title ? (
+                <div key={key.id} onClick={() => setState(key.title)}>
+                  {key.title}
+                </div>
+              ) : null
+            )}
+          </div>
+        </form>
+
+        <img src={search} alt="search" onClick={() => SerchFnc()} />
+      </div>
+
+      <div className={secondStyle.profileBasket}>
+        <img src={pofile} alt="pofile" />
+        <Link to="/Cart" onClick={() => switchPage()}>
+          <img className={secondStyle.basketImg} src={basket} alt="basket" />
+          <span className={secondStyle.Baskect_count}>{inCart.length}</span>
+        </Link>
+      </div>
+    </div>
+  );
+};
+export default SecondHeader;

@@ -1,0 +1,31 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.firstHeader {
+  @include flc();
+  justify-content: space-between;
+  padding-bottom: rem(16);
+  border-bottom: 1px solid $colorBlackL;
+  font-family: $FFOpenSans;
+
+  .contacts {
+    @include flc();
+    div {
+      margin-right: rem(33);
+      &:hover {
+        color: $colorGreen;
+      }
+    }
+  }
+  .info {
+    @include flc();
+
+    div {
+      margin-right: rem(38);
+      color: $colorGreen;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

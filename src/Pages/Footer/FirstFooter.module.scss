@@ -1,0 +1,26 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.FooterFirst{
+    @include flc();
+    justify-content: space-between;
+    .FooterFirstBlock{
+        @include flexcolumn();
+        align-self: flex-start;
+        
+        h1{
+            font-family: $FFPopSB;
+            font-size: rem(18);
+            line-height: rem(27);
+            color: $colorBlack;
+            margin-bottom: rem(16);
+        }
+        a{
+            font-family: $FFOpenSans;
+            font-size: rem(14);
+            line-height: rem(19);
+            color: $colorGreen;
+            margin-bottom: rem(16);
+        }
+    }
+}

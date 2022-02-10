@@ -1,0 +1,21 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+.Header{
+    @include flc();
+    justify-content: space-between;
+    margin-bottom: rem(37);
+    padding-top: rem(70);
+    .HeaderBtn{
+        @include flc();
+        button{
+            font-family: $FFPopB;
+            font-size: rem(15);
+            line-height: rem(22);
+            background-color: $colorWhite;
+            border: none;
+            color: $colorBlack;
+            cursor: pointer;
+        }
+    }
+  
+}

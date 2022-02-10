@@ -1,0 +1,23 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.MoreBtn{
+    @include flc();
+    justify-content: center;
+    padding: rem(12.5) rem(16);
+    background-color: $colorGreyBtn;
+    margin-top: rem(36);
+    border-radius: rem(12);
+    font-family: $FFPopB; 
+    font-size: rem(15);
+    line-height: rem(22);
+    cursor: pointer;
+    &:active{
+        background-color: $colorGreyBorder;
+    }
+    img{
+        margin-left: rem(6)
+    }
+
+}
+

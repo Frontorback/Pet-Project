@@ -1,0 +1,87 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+    .Direction{
+        margin: rem(16.5) 0;
+        font-family: $FFOpenSans;
+        font-size: rem(12);
+        line-height: rem(16);
+        a{
+            color: $colorGrey1;
+        }
+    }
+    .FiltersOnTop{
+        @include flc();
+        font-family: $FFPopSB;
+        font-size: rem(12);
+        line-height: rem(18);
+        .AppliedFilters{  
+            color: $colorGrey1;      
+            margin-bottom: rem(40);
+            @include flc();
+            flex-wrap: wrap;
+            &:hover{
+                cursor: pointer;
+            }
+            .SelectedFilter{
+                @include flc();
+                margin-left: rem(12);
+                background-color: $colorGreenBack;
+                color: $colorGreen;
+                padding: 0 rem(8);
+                border-radius: rem(12);
+                img{
+                    margin-left: rem(4);
+                    align-self: center;
+                }
+            }
+        }
+      
+    }
+    .ProductPage{
+        @include flc($al: flex-start);
+        .ProductItems{
+            @include flc();
+            flex-wrap: wrap;
+        }
+    }
+.Pages{
+    @include flc();
+    font-family: $FFOpenSans;
+    font-size: rem(12);
+    line-height: rem(16);
+    color: $colorGrey1;
+    margin: rem(16) 0 rem(81) 0;
+    .currentPage{
+        color: $colorGreen;
+        margin-left: rem(8);
+        cursor: pointer;      
+    }
+    .numPage{
+        color: $colorBlack;
+        margin-left: rem(8);
+        cursor: pointer;
+    }
+    .ShowMoreBtn{
+        @include flc();   
+        font-family: $FFPopB;
+        font-size: rem(15);
+        line-height: rem(22);
+        color: $colorWhite;
+        background-color: $colorGreen;
+        border: rem(2) solid $colorGreenBorderBuy;
+        padding: rem(12) rem(16);
+        border-radius: rem(12);
+        cursor: pointer;
+        margin: 0 auto;
+        
+        img{
+            width: rem(16);
+            height: rem(16);
+            margin-left: rem(6);
+        }
+    }
+    .HideMoreBtn{
+        display: none;
+    }
+}

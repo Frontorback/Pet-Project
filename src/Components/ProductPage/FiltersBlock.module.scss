@@ -1,0 +1,200 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.Categories{
+    @include flexcolumn();
+    width: rem(268);
+    h1, h2, h4{
+        font-family: $FFPopSB;
+        font-size: rem(18);
+        line-height: rem(27);
+        margin-bottom: rem(4) 
+    }
+    h2, h3, h4{
+        margin-top: rem(48);
+    }
+    .CategoriesRow{
+        @include flc();
+        justify-content: space-between;
+        margin-top: rem(12);
+
+        .CategoriesItem{
+            font-family: $FFOpenSans;
+            font-size: rem(14);
+            line-height: rem(19);
+            color: $colorBlack;
+            cursor: pointer;
+            margin-left: rem(-10);
+            padding: rem(1) rem(30) rem(1) rem(10);
+            border-radius: rem(12);
+            &:hover{     
+                background-color: $colorGreenBack;
+            }
+        }
+        .CategoriesItemActive{
+            background-color: $colorGreenBack;
+        }
+        .CategoriesCount{
+            padding: 0 rem(8);
+            font-family: $FFPopSB;
+            font-size: rem(12);
+            line-height: rem(18);
+            border-radius: rem(12);
+            color: $colorGreen;
+            background-color: $colorGreenBack;
+        }
+    }
+
+    .BrandsRow{
+        @include flc();
+        margin-top: rem(12);
+        position: relative;  
+        .labelBox{
+            font-family: $FFOpenSans;
+            font-size: rem(14);
+            line-height: rem(19);
+            color: green;
+            padding-left: rem(30);
+            @include flc();
+            cursor: pointer;
+        }
+        .inputBox{
+            -webkit-appearance: none;
+            appearance: none;
+            position: absolute;
+            
+        }
+        .labelBox::before{
+            content: "";
+            display: block;
+            width: rem(20);
+            height: rem(20);
+            border: rem(1.5) solid $colorGreyBorder;
+            border-radius: rem(2);
+            background-color: $colorWhite;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            transition: background-color .1s linear, border .1s linear;
+        }
+        .labelBox::after{
+            content: "";
+            display: block;
+            width: rem(16);
+            height: rem(16);
+            background: url("../../img/checkbox.svg") no-repeat;
+            background-size: rem(16) rem(16);
+            opacity: 0;
+            
+            position: absolute;
+            top: rem(4);
+            left: rem(4);
+            z-index: 2;
+            transition: opacity .1s linear;
+        }
+        .inputBox:checked + .labelBox:before{
+            background-color: $colorGreen;
+            border-color: $colorGreenBorderBuy;
+        }
+        .inputBox:checked + .labelBox:after{
+            opacity: 1;
+        }
+    }
+    //
+
+    .slideContainer{
+        width: rem(251);
+        margin-top: rem(16);
+          
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: rem(6);
+            border-radius: rem(12);
+            background-color: $colorGreyBack2;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+          }
+          
+          .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: rem(20);
+            height: rem(20);
+            border: rem(1) solid $colorGreyBorder;
+            border-radius: 50%; 
+            background-color: $colorWhite;
+            cursor: pointer;
+          }
+          
+          .slider::-moz-range-thumb {
+            width: rem(20);
+            height: rem(20);
+            border-radius: 50%;
+            background-color: $colorWhite;
+            cursor: pointer;
+          }
+        }
+
+    .PriceSlide{
+        margin: rem(16) 0;
+        @include flc();
+        justify-content: space-between;
+        max-width: rem(251);
+        .PriceMinMax{
+            @include flexcolumn();
+            .PriceTitle{
+                font-family: $FFPopSB;
+                font-size: rem(12);
+                line-height: rem(18);
+                color: $colorBlack;
+            }
+            .PriceCount{
+                width: rem(72);
+                padding: rem(11) rem(16) rem(12) rem(21);
+                background-color: $colorGreyBack;
+                color: $colorGrey1;
+                font-family: $FFOpenSans;
+                font-size: rem(14);
+                line-height: rem(19);
+                border: rem(1) solid $colorGreyBorder;
+                border-radius: rem(12);
+            }
+            
+        }
+        .BetweenPrice{
+            color: $colorGrey1;
+        }
+    }
+    
+    .BtnContainer{
+        @include flc();
+        margin-top: rem(15);
+        
+        .ApplyBtn,
+        .ResetBtn{
+            padding: rem(12.5) rem(16);
+            border-radius: rem(12);
+            cursor: pointer;
+            &:active{
+                background-color: $colorGreyBorder;
+                border-color: $colorGreyBorder;
+            }
+        }
+        .ApplyBtn{
+            color: $colorWhite;
+            background-color: $colorGreen;
+            border: rem(2) solid $colorGreenBorderBuy;
+            margin-right: rem(40);            
+        }
+        .ResetBtn{
+            color: $colorGrey1;
+            border: rem(2) solid $colorGreyBorder;
+        }
+    }
+}

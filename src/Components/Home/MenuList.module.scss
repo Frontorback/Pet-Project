@@ -1,0 +1,25 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+.MenuList{
+    @include flexcolumn();
+    .menuTitle{
+        font-family: $FFPopSB;
+        font-size: rem(18);
+        line-height: rem(27);
+        margin-bottom: rem(16);
+    }
+
+    .menuItem{
+        margin-bottom: rem(12);
+        .link{
+            color: rgba(106, 152, 60, 1);
+            text-decoration: underline;
+            font-family: $FFOpenSans;
+            font-size: rem(14);
+            line-height: rem(19);
+            cursor: pointer;
+        }
+    
+    }
+
+}
