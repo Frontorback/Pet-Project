@@ -2,8 +2,7 @@
 
 ### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
 
-<a href="https://frontorback.github.io/" target="_blank">https://frontorback.github.io/</a>
-<a href="https://frontorback.github.io/"  target="_blank">external link</a>
+<a href="https://frontorback.github.io/" target="_blank">https://frontorback.github.io/</a> - cсылка на сайт
 
 *Home Page*: На главной странице есть поисковая строка, которая зависит от выбранной категории, корзина, меню и отфильтрованные продукты по неким параметрам.
 
