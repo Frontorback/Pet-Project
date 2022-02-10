@@ -1,6 +1,6 @@
 # Grocery store
 
-Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
+### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
 
 *Home Page*: На главной странице есть поисковая строка, которая зависит от выбранной категории, корзина, меню и отфильтрованные продукты по неким параметрам.
 
