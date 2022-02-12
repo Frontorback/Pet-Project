@@ -1,46 +1,14 @@
-# Getting Started with Create React App
+# Grocery store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
 
-## Available Scripts
+*Home Page*: На главной странице есть поисковая строка, которая зависит от выбранной категории, корзина, меню и отфильтрованные продукты по неким параметрам.
 
-In the project directory, you can run:
+*Product Page*: В зависимости от выбранной категории (в блоке меню) появляется блок с фильтрами и массив с продуктами. Выбранные фильтри применяются после нажатия кнопки "Apply". Так же можно выбрать под блоком меню тип отображения массив (Grid or List type). Внизу присутствует кол-во страниц и кнопка "Show more Products".
 
-### `npm start`
+*Product Detail*: При нажатии на кнопку "Product detail" или "Buy now" (в зависимости от выбранного типа отображения массива) откроется более подробная информация о товаре. При нажатии на кнопку "Add to Cart" товар добавится в корзину (Возле навигации есть значек корзины с количеством товаров внутри)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*Cart*: Корзина состоит из Блоков инпутов для заполнения информации и выбранных товаров. Инпуты были написаны с помощью UseForm библиотеки. В блоке с выбранными продуктами есть кнопка "remove", сумма всех продуктов, сумма налога (17% от цены), промо-кода нету, но не проблема его реализовать и итоговая цена. После заполнения всех обязательных полей и нажатии на кнопку "Complete order" форма + айди выбранных продуктов отправляются на firebase с помощью axios.post запроса в createAsyncThunk.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
