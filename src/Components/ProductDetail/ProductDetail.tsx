@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "./ProductDetail.module.scss"
 import bigGoldStar from "../../img/bigGoldStar.svg"
 import whiteStarS from "../../img/whiteStarS.svg"
@@ -38,9 +38,12 @@ const ProductDetail = () => {
         }    
     }
 
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+
     return(
         <>
-        {window.scrollTo(0,0)}
         <div className={styled.HeaderLink}>
             <a href="/" onClick={() => dispatch(removeDetail())}> HomePage</a>
             <span>/</span>
