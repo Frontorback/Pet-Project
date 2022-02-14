@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import secondStyle from "./secondStyle.module.scss";
 import freshnesecom from "../../img/Freshnesecom.svg";
 import arrow from "../../img/Arrow.svg";
@@ -13,7 +13,10 @@ import { useNavigate } from "react-router-dom";
 import { clearFilters, searchFilter } from "../../Redux/FiltersSlice";
 import { MenuAPI, Products } from "../../API/api";
 const SecondHeader = () => {
-  const [state, setState] = useState("");
+  const [state, setState] = useState({
+    message: "",
+    isHelp: false
+  });
   const [categ, setCateg] = useState({
     isChoosing: false,
     setCategorie: "All categories",
@@ -36,6 +39,28 @@ const SecondHeader = () => {
     dispatch(closeDetail());
     dispatch(clearFilters());
   };
+  useEffect(() =>{
+    document.addEventListener('click', () => setCateg({ ...categ, isChoosing: false }));
+    document.addEventListener('click', () => setState({ ...state, isHelp: false }));
+
+})
+const changeCateg = (e:any, title?:string) =>{
+  e.stopPropagation();
+  if(title){
+    setCateg({...categ,isChoosing:false, setCategorie: title })
+  }else{
+    setCateg({ ...categ, isChoosing: !categ.isChoosing })
+  }
+
+}
+
+const helpForSearch = (e:any,bool:boolean, mes:string) =>{
+  e.stopPropagation();
+  setState({...state, isHelp:bool, message:mes})
+
+}
+
+
 
   return (
     <div className={secondStyle.secondHeader}>
@@ -46,7 +71,7 @@ const SecondHeader = () => {
       <div className={secondStyle.searchSection}>
         <div
           className={secondStyle.categories}
-          onClick={() => setCateg({ ...categ, isChoosing: !categ.isChoosing })}
+          onClick={(e) => changeCateg(e)}
         >
           {categ.setCategorie}
         </div>
@@ -62,8 +87,8 @@ const SecondHeader = () => {
               categ.isChoosing && (
                 <div
                   key={key.id}
-                  onClick={() =>
-                    setCateg({ isChoosing: false, setCategorie: key.title })
+                  onClick={(e) =>
+                    changeCateg(e, key.title )
                   }
                 >
                   {key.title}
@@ -95,17 +120,18 @@ const SecondHeader = () => {
         <form onSubmit={() => SerchFnc()}>
           <input
             placeholder="Search Products, categories ..."
-            value={state}
-            onChange={(e) => setState(e.target.value)}
+            value={state.message}
+            onChange={(e) => helpForSearch(e, true, e.target.value)}
           />
           <div className={secondStyle.SearchList}>
             {SearchCateg.map((key) =>
               key.title
                 .toLocaleLowerCase()
-                .includes(state.toLocaleLowerCase()) &&
-              state.length > 0 &&
-              state !== key.title ? (
-                <div key={key.id} onClick={() => setState(key.title)}>
+                .includes(state.message.toLocaleLowerCase()) &&
+              state.message.length > 0 &&
+              state.isHelp &&
+              state.message !== key.title ? (
+                <div key={key.id} onClick={(e) => helpForSearch(e, false, key.title)}>
                   {key.title}
                 </div>
               ) : null
