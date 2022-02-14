@@ -32,7 +32,7 @@ const SecondHeader = () => {
   const inCart = useSelector((state: RootState) => state.products.order);
   let navigate = useNavigate();
   const SerchFnc = () => {
-    dispatch(searchFilter(state));
+    dispatch(searchFilter(state.message));
     navigate("/Search");
   };
   const switchPage = () => {
@@ -122,6 +122,7 @@ const helpForSearch = (e:any,bool:boolean, mes:string) =>{
             placeholder="Search Products, categories ..."
             value={state.message}
             onChange={(e) => helpForSearch(e, true, e.target.value)}
+
           />
           <div className={secondStyle.SearchList}>
             {SearchCateg.map((key) =>
