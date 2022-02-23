@@ -2,7 +2,7 @@
 
 ### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScripts
 
-<a href="https://pet-project-phi.vercel.app/" target="_blank">https://pet-project-phi.vercel.app/</a> <--- посмотреть сайт тут
+<a href="https://pet-project-phi.vercel.app/" target="_blank">https://pet-project-phi.vercel.app/</a> <--- посмотреть сайт ту
 
 <a href="https://www.figma.com/file/1PGSbfvK9aqGqMlN1utBRD/Figma---eCommerce-template?node-id=2%3A1713" target="_blank">Макет</a> 
 
