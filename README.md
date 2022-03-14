@@ -1,6 +1,6 @@
 # Grocery store
 
-### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScripts
+### Продуктовый магазин на React + Redux Toolkit + Redux persist + SASS + TypeScript
 
 <a href="https://pet-project-phi.vercel.app/" target="_blank">https://pet-project-phi.vercel.app/</a> <--- посмотреть сайт тут
 
