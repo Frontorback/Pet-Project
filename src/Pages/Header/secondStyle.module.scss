@@ -6,6 +6,13 @@
   justify-content: space-between;
   padding-top: rem(40);
   padding-bottom: rem(48);
+  .burger{
+    display: none;
+    height: 4vh
+  }
+  .Logo{
+    transform: scaleX(1);
+  }
 
   .searchSection {
     @include flc();
@@ -118,4 +125,19 @@
       }
     }
   }
+}
+@media (max-width: 1200px) {
+  .secondHeader{
+    padding: rem(16) 0 0 0;
+    .burger{
+      display: block;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .Logo{
+      display: none;
+    }
+  }
+  
 }

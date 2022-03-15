@@ -5,6 +5,7 @@ import arrow from "../../img/Arrow.svg";
 import search from "../../img/search.svg";
 import pofile from "../../img/pofile.svg";
 import basket from "../../img/basket.svg";
+import burgerImg from "../../img/burger.svg";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { closeDetail } from "../../Redux/ProductSlice";
@@ -12,6 +13,7 @@ import { RootState } from "../../Redux/store";
 import { useNavigate } from "react-router-dom";
 import { clearFilters, searchFilter } from "../../Redux/FiltersSlice";
 import { MenuAPI, Products } from "../../API/api";
+import Burger from "./BurgerMenu/Burger";
 const SecondHeader = () => {
   const [state, setState] = useState({
     message: "",
@@ -59,14 +61,21 @@ const helpForSearch = (e:any,bool:boolean, mes:string) =>{
   setState({...state, isHelp:bool, message:mes})
 
 }
+// const helpForSearchList = (e:any,bool:boolean, mes:string) =>{
+//   helpForSearch(e, bool, mes)
+//   SerchFnc()
+// }
 
-
+const [burger, setBurger] = useState<boolean>(false)
 
   return (
+    <>
     <div className={secondStyle.secondHeader}>
-      <Link to={"/"}>
+      <Link className={secondStyle.Logo} to={"/"}>
         <img src={freshnesecom} alt="SecondHeader" />
       </Link>
+
+        <img className={secondStyle.burger} src={burgerImg} alt="burger" onClick={() => setBurger(!burger)} />
 
       <div className={secondStyle.searchSection}>
         <div
@@ -151,6 +160,8 @@ const helpForSearch = (e:any,bool:boolean, mes:string) =>{
         </Link>
       </div>
     </div>
+     <Burger burger={burger} setBurger={setBurger}/>
+     </>
   );
 };
 export default SecondHeader;

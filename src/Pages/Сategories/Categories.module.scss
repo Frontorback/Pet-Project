@@ -11,15 +11,23 @@
     margin-left: 2.8125rem;
   }
   li {
+    @include flc();
     margin-right: 2.5rem;
+    
     a {
       color: $colorBlack;
-      font-family: "Poppins-Medium";
+      font-family: $FFPopM;
     }
     .miniArrow {
       margin-left: 0.125rem;
       width: 0.75rem;
       height: 0.75rem;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .NavList{
+    display: none;
   }
 }

@@ -10,7 +10,7 @@
     padding: rem(15);
     align-self: flex-start;
     img{
-        width: 12.344vw;
+        max-width: 12.344vw;
         height: rem(180);
         margin: 0 auto;
         position: relative;
@@ -34,6 +34,8 @@
         line-height: rem(22);
     }
     h3{
+        
+        width: 20vh;
         font-family: $FFOpenSans;
         color: $colorGrey2;
         margin-bottom: rem(16);
@@ -80,4 +82,25 @@
         }
     }
     
+}
+
+@media (max-width: 1730px){
+    .Card img {
+        max-width: 14vw;
+    }
+  }
+@media (max-width: 1540px){
+    .Card img {
+        max-width: 16vw;
+    }
+}
+@media (max-width: 1335px){
+    .Card img {
+        max-width: 20vw;
+    }
+}
+@media (max-width: 1070px){
+    .Card img {
+        max-width: 22vw;
+    }
 }

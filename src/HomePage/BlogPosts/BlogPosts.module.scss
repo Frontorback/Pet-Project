@@ -6,9 +6,8 @@
     margin-bottom: rem(128);
 .BlogMain{
     position: relative;
-
+    align-self: flex-start;
     img{
-        width: rem(469);
         height: rem(400);
         border-radius: rem(12);
     }
@@ -65,15 +64,14 @@
         width: rem(269);
         align-self: flex-start;
         margin: 0 rem(31.5);
+        
         img{
-            width: rem(269);
             height: rem(180);
             border-radius: rem(12);
             margin-bottom: rem(24);
         }
         .tagS{
-            // display: inline-block;
-            width: auto;
+            align-self: flex-start;
             padding: 0 rem(8);
             border-radius: rem(12);
             color: $colorGreen;
@@ -115,7 +113,7 @@
             margin-bottom: rem(32);
             .LastBlogTetx{
                 @include flexcolumn();
-                width: rem(249);
+                min-width: rem(249);
                 p{
                     margin-top: rem(9.5);
                     font-family: $FFPopM;
@@ -137,7 +135,6 @@
         
             }
             img{
-                width: rem(96);
                 height: rem(96);
                 border-radius: rem(12);
                 margin-left: rem(24);
@@ -146,3 +143,30 @@
     }
     
 }
+@media (max-width: 1458px){
+    .Blog .BlogMain img{
+            height: rem(352);
+        }   
+  }
+  @media (max-width: 1300px){
+    .Blog {
+      @include flexcolumn();
+      .BlogMain{
+        margin: 0 auto;
+        img{
+            height: rem(640);
+        }
+      }
+      .UnderText{
+        margin: rem(16) auto;
+        align-items: center;
+        img{
+            height: rem(420);
+        }
+      }
+      .LastColumnBlock{
+          margin: 0 auto;
+      }
+
+    }
+  }

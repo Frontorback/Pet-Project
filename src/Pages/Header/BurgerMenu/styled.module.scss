@@ -1,0 +1,79 @@
+@import "../../../scss/mixins";
+@import "../../../scss/variables";
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0;
+    z-index: 22;
+    transform: translateX(-130%);
+    transition: all 0.5s;
+    .backGrey {
+      width: 100vw;
+      height: 100vh;
+      left: 30%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+    }
+    .menu__content {
+      width: 30%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.6s;
+      padding: rem(16);
+        .Logo {
+          &:hover{
+            cursor: pointer;
+            
+          }
+          img{
+            height: 2vh;
+            transform: scaleX(1);
+          }
+            align-self: center;
+            margin: 0 0 rem(16) rem(-32);
+            
+          
+          
+          
+        }
+      ul li a{
+        margin-top: rem(10);
+        color: $colorBlack;
+        font-family: $FFPopM;
+        &:hover{
+          cursor: pointer;
+          color: $colorGreenBorder;
+        }
+      }
+      
+        
+      
+    }
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+  
+  
+  @media (max-width: 360px) {
+    .menu {
+      transform: translateX(-175%);
+      .back-grey {
+        left: 75%;
+      }
+      .menu__content {
+        width: 75%;
+        ul li{
+          line-height: 26px;
+          margin-bottom: 22px;
+        }
+
+      }
+      
+    }
+    
+  }

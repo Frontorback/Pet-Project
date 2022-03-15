@@ -4,6 +4,7 @@
 .MoreBtn{
     @include flc();
     justify-content: center;
+    text-align: center;
     padding: rem(12.5) rem(16);
     background-color: $colorGreyBtn;
     margin-top: rem(36);

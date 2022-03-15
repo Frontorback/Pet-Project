@@ -3,7 +3,26 @@
 
 .HeadLineCards{
     @include flc();
+    flex-wrap: wrap;
+    justify-content: center;
     div:first-child{
         margin-left: 0;
     }
+}
+
+@media (max-width: 1715px){
+    .HeadLineCards div:last-child{
+        margin-left: 0;    
+    } 
+}
+@media (max-width: 1213px){
+    .HeadLineCards div{
+        &:nth-child(3){
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-left: rem(30);  
+        }
+          
+    } 
 }
