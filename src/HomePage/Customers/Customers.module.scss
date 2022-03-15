@@ -19,6 +19,10 @@
             font-size: rem(15);
             line-height: rem(22);
             text-align: center;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         div{
             font-family: $FFPopSB;
@@ -32,9 +36,8 @@
             width: rem(48);
             height: rem(48);
             border-radius: rem(24);
-            position: absolute;
-            margin-left: rem(160.5);
-            margin-top: rem(24);
+            margin-top: 3%;
+            margin-left: 43%;
         }
     }
     .CustomersHide{

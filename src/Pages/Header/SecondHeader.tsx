@@ -153,7 +153,7 @@ const [burger, setBurger] = useState<boolean>(false)
       </div>
 
       <div className={secondStyle.profileBasket}>
-        <img src={pofile} alt="pofile" />
+        <img className={secondStyle.profileBasket__profileImg}src={pofile} alt="pofile" />
         <Link to="/Cart" onClick={() => switchPage()}>
           <img className={secondStyle.basketImg} src={basket} alt="basket" />
           <span className={secondStyle.Baskect_count}>{inCart.length}</span>

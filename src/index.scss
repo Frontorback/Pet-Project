@@ -69,8 +69,13 @@ code {
     padding: 0 14%;
   }
 }
-@media (max-width: 1600px){
+@media (max-width: 1650px){
   body {
     padding: 0 10%;
+  }
+}
+@media (max-width: 850px){
+  body {
+    padding: 0 0;
   }
 }

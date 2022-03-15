@@ -16,7 +16,7 @@ const BestSelling = () => {
       <MenuList title="Best selling products" BtnTxt="products" Best={SortProducts} isProduct={true}/>
       <div className={styled.Cards}>
         {SortProducts.slice(0, 3).map((key) => (
-           document.body.clientWidth > 1360 || document.body.clientWidth < 1140 ?
+           document.body.clientWidth > 1510 || document.body.clientWidth < 1140 ?
           <Card
             key={key.id.toString()}
             image={key.image}

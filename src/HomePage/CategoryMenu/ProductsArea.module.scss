@@ -8,7 +8,7 @@
 .Cards{
     @include flc();
 }
-@media (max-width: 1360px){
+@media (max-width: 1510px){
     .Cards{
         @include flexcolumn();
     }

@@ -3,6 +3,7 @@
 
 .Card{
     @include flexcolumn;
+    width: rem(269);
     margin-left: rem(32);
     margin-bottom: rem(48);
     border-radius: rem(12);
@@ -10,9 +11,7 @@
     padding: rem(15);
     align-self: flex-start;
     img{
-        max-width: 12.344vw;
         height: rem(180);
-        margin: 0 auto;
         position: relative;
         border-radius: rem(12);
     }
@@ -64,7 +63,7 @@
 
         .BuyBtn{
             width: 4.4795vw;
-            padding: rem(5) 0;
+            padding: rem(5);
             text-align: center;  
             font-family: $FFPopB;
             font-size: rem(15);
@@ -82,25 +81,4 @@
         }
     }
     
-}
-
-@media (max-width: 1730px){
-    .Card img {
-        max-width: 14vw;
-    }
-  }
-@media (max-width: 1540px){
-    .Card img {
-        max-width: 16vw;
-    }
-}
-@media (max-width: 1335px){
-    .Card img {
-        max-width: 20vw;
-    }
-}
-@media (max-width: 1070px){
-    .Card img {
-        max-width: 22vw;
-    }
 }

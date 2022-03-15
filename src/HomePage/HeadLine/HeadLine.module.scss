@@ -26,3 +26,11 @@
           
     } 
 }
+@media (max-width: 745px){
+    .HeadLineCards div  {
+        margin-left: 0;   
+        &:last-child{
+            margin-left: 0;  
+        }
+    } 
+}

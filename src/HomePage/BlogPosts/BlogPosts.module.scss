@@ -153,6 +153,18 @@
       @include flexcolumn();
       .BlogMain{
         margin: 0 auto;
+        .BlogMainTxt{
+            width: 100%;
+            height: 95.5%;
+            p{
+                position: absolute;
+                bottom: rem(80);
+            }
+            .Author{
+                position: absolute;
+                bottom: rem(30);
+            }
+        }
         img{
             height: rem(640);
         }
@@ -169,4 +181,15 @@
       }
 
     }
+  }
+  @media (max-width: 940px){
+    .Blog{
+        .BlogMain img{
+            height: rem(320);
+        }   
+        .UnderText img{
+            height: rem(210);
+        }
+    }
+     
   }

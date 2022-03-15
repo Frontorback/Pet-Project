@@ -50,12 +50,6 @@
   }
 }
 
-// @media (max-width: 1600px){
-//   .RecepArea {
-//     @include flexcolumn();
-//   }
-
-// }
 @media (max-width: 1600px){
   .RecepArea{
     @include flexcolumn();
@@ -66,8 +60,12 @@
       .RecepiesBtn{
         min-width: 20vw;
       }
-}
+    }
   }
    
 }
-
+@media (max-width: 800px){
+  .RecepArea .RecepCard{
+    width: 35vw;
+  }
+}
