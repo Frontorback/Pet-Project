@@ -3,7 +3,7 @@
 
 .Card{
     @include flexcolumn;
-    width: rem(269);
+    width: rem(237);
     margin-left: rem(32);
     margin-bottom: rem(48);
     border-radius: rem(12);
@@ -62,7 +62,6 @@
         }
 
         .BuyBtn{
-            width: 4.4795vw;
             padding: rem(5);
             text-align: center;  
             font-family: $FFPopB;
@@ -81,4 +80,11 @@
         }
     }
     
+}
+
+@media (max-width: 580px){
+    .Card{
+        margin-left: 0;
+        width: rem(224);
+    }
 }

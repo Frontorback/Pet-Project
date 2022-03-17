@@ -76,6 +76,11 @@ code {
 }
 @media (max-width: 850px){
   body {
-    padding: 0 0;
+    padding: 0;
+  }
+}
+@media (max-width: 580px){
+  .body {
+    padding: 0;
   }
 }

@@ -14,6 +14,7 @@ const BestSelling = () => {
   return (
     <div className={styled.ProductsArea}>
       <MenuList title="Best selling products" BtnTxt="products" Best={SortProducts} isProduct={true}/>
+      <h1 className={styled.ProductsArea__Title}>Best selling products</h1>
       <div className={styled.Cards}>
         {SortProducts.slice(0, 3).map((key) => (
            document.body.clientWidth > 1510 || document.body.clientWidth < 1140 ?

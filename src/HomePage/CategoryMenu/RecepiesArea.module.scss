@@ -6,7 +6,7 @@
   .RecepCard {
     @include flexcolumn();
     justify-content: space-between;
-    width: 21.823vw;
+    width: rem(420);
     height: rem(280);
     background: url(../../img/BGRecepies.svg);
     margin-left: rem(32);
@@ -68,4 +68,16 @@
   .RecepArea .RecepCard{
     width: 35vw;
   }
+}
+@media (max-width: 580px) {
+  .RecepArea{
+    margin: 0 auto;
+    .RecepCard{
+      margin-left: 0;
+      width: 80vw;
+      .RecepiesBtn{
+        min-width: 35vw;
+      }
+    }
+  } 
 }

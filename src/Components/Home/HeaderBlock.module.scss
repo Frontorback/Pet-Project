@@ -19,3 +19,11 @@
     }
   
 }
+@media (max-width: 580px){
+    .Header{
+        margin-left: rem(10);
+        .HeaderBtn{
+            display: none;
+        }
+    } 
+}

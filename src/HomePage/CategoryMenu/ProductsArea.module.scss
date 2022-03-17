@@ -3,7 +3,10 @@
     margin: rem(64) 0;
     @include flc($al: flex-start);
     justify-content: space-between;
-
+    .ProductsArea__Title{
+        display: none
+    }
+    
 }
 .Cards{
     @include flc();
@@ -16,5 +19,14 @@
 @media (max-width: 1140px){
     .Cards{
         margin: 0 auto;
+    }
+}
+@media (max-width: 580px){
+    .ProductsArea{
+        @include flexcolumn();
+        .ProductsArea__Title{
+            display: flex;
+            margin: 0 0 rem(20) rem(10);
+        }
     }
 }

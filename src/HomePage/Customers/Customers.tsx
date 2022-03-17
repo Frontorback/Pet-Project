@@ -26,7 +26,7 @@ const Customers = () => {
       <HeaderBlock title="Our customers says" BtnTxt="button" />
       <div className={styled.CustomersMainArea}>
         {CustomersAPI.map((key) => (
-          <div className={key.id === state || key.id === state + 1 ? styled.CustomersItem : styled.CustomersHide}
+          <div className={key.id === state || (key.id === state + 1 && document.body.clientWidth > 580) ? styled.CustomersItem : styled.CustomersHide}
               key={key.id}
           >
             <p>{key.text}</p>

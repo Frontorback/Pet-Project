@@ -71,3 +71,22 @@
         right: rem(-45);
     }
 }
+
+@media (max-width: 580px){
+    .CustomersMainArea {
+        .CustomersItem{
+            max-width: 70%;
+            margin-right: 0;
+        }
+        .LeftBtn{
+            left: 0;
+        }
+        .RightBtn{
+            right: 0;
+            img{
+                transform: scale(1);
+            }
+        }
+    }
+    
+}

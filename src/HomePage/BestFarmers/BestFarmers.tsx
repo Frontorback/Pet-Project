@@ -12,6 +12,7 @@ const BestFarmers = () =>{
     return (
         <div className={styled.ProductsArea}>
             <MenuList title="Best from Farmers" BtnTxt="products" Best={FarmerFilter} isProduct={true}/>
+            <h2 className={styled.ProductsArea__Title}>Best from Farmers</h2>
             <div className={styled.Cards}>
                 {
                     FarmerFilter.slice(0,3).map(key =>(

@@ -157,6 +157,7 @@
             width: 100%;
             height: 95.5%;
             p{
+                width: 90%;
                 position: absolute;
                 bottom: rem(80);
             }
@@ -175,6 +176,9 @@
         img{
             height: rem(420);
         }
+        .tagS{
+            align-self: center;
+        }
       }
       .LastColumnBlock{
           margin: 0 auto;
@@ -192,4 +196,23 @@
         }
     }
      
+  }
+  @media (max-width: 580px){
+    .Blog .LastColumnBlock{
+        margin: 0 rem(10);
+    }
+  }
+  @media (max-width: 400px){
+    .Blog {
+        margin-left:rem(10);
+        .BlogMain{
+            .BlogMainTxt{
+                width: 90%;
+            }
+        }
+        .LastColumnBlock .LastColumnBlockRow img{
+            display: none;
+        }
+            
+    }
   }
