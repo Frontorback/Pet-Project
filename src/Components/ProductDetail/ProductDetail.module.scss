@@ -284,3 +284,20 @@
         }
     }
 }
+
+@media (max-width: 1550px) {
+    .ProductDetail .ProductDetail__Images img{
+        width: rem(290);
+        height: auto;
+    }
+}
+@media (max-width: 1200px) {
+    .ProductDetail{
+        @include flexcolumn();
+        .ProductDetail__Images img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+}

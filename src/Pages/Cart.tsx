@@ -11,7 +11,7 @@ const Cart = () =>{
         <>  
             {CartItems.length > 0  ? 
         
-            <div style={{display: "flex", flexDirection: "row" }}>
+            <div style={{display: "flex", flexDirection: document.body.clientWidth > 1500 ? "row": "column" }}>
                 <BillingInfoAndMethods/>
                 <OrderSummary />
             </div>

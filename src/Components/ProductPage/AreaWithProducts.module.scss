@@ -43,6 +43,7 @@
         .ProductItems{
             @include flc();
             flex-wrap: wrap;
+            justify-content: center
         }
     }
 .Pages{
