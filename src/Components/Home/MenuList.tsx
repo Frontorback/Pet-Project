@@ -37,7 +37,7 @@ const MenuList: FC<IMenuList> = ({title, BtnTxt, Best, isProduct}) =>{
                 ))
                 }    
             </ul>
-            <MoreBtn onClick={() => setShow(!show)}>{show ? "More" : "Less"} {BtnTxt}</MoreBtn>
+           {Best.length > 5 && <MoreBtn onClick={() => setShow(!show)}>{show ? "More" : "Less"} {BtnTxt}</MoreBtn>} 
             
         </div>
     )
