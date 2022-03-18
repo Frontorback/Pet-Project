@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { switchToDetail } from "../../Redux/ProductSlice";
 
 const MenuList: FC<IMenuList> = ({title, BtnTxt, Best, isProduct}) =>{
-    const [show, setShow] = useState<boolean>(document.body.clientWidth > 1360 ? true : false)
+    const [show, setShow] = useState<boolean>(true)
 
     let Menu = show ? Best.slice(0,5) : Best
 

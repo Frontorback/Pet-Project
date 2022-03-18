@@ -3,7 +3,6 @@ import { Products } from "../../API/api";
 import Card from "../../Components/ViewType/Card";
 import MenuList from "../../Components/Home/MenuList";
 import styled from "../CategoryMenu/ProductsArea.module.scss";
-import CardList from "../../Components/ViewType/CardList";
 
 const BestFarmers = () =>{
     let FarmerFilter = Products.slice().filter(e => e.brand === "from Farmer").sort((a, b) =>{
@@ -14,9 +13,7 @@ const BestFarmers = () =>{
             <MenuList title="Best from Farmers" BtnTxt="products" Best={FarmerFilter} isProduct={true}/>
             <h2 className={styled.ProductsArea__Title}>Best from Farmers</h2>
             <div className={styled.Cards}>
-                {
-                    FarmerFilter.slice(0,3).map(key =>(
-                        document.body.clientWidth > 1510 || document.body.clientWidth < 1140 ?
+                { FarmerFilter.slice(0,3).map(key =>(
                             <Card
                             key={key.id.toString()}
                             image={key.image}
@@ -25,20 +22,6 @@ const BestFarmers = () =>{
                             Price={key.price}
                             OldPrice={key.oldPrice}
                             ID={key.id}                        
-                            />
-                            :
-                            <CardList
-                            key={key.id.toString()}
-                            image={key.image}
-                            ProductTitle={key.title}
-                            Description={key.productDescription}
-                            Price={key.price}
-                            OldPrice={key.oldPrice}
-                            Brand={key.brand}
-                            Delivery={key.delivery}
-                            Rating={key.rating}
-                            ID={key.id}
-                            link={key.productType}
                             />
                     ))
                 }

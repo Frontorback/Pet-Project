@@ -10,17 +10,10 @@
 }
 .Cards{
     @include flc();
+    flex-wrap: wrap;
+        justify-content: center;
 }
-@media (max-width: 1510px){
-    .Cards{
-        @include flexcolumn();
-    }
-}
-@media (max-width: 1140px){
-    .Cards{
-        margin: 0 auto;
-    }
-}
+
 @media (max-width: 580px){
     .ProductsArea{
         @include flexcolumn();
